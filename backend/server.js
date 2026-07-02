@@ -1,0 +1,34 @@
+require("dotenv").config();
+const express = require("express");
+const connectDB = require("./db/db");
+const cors = require("cors");
+const app = express();
+const { clerkMiddleware } = require("@clerk/express");
+const path = require("path");
+const invoiceRouter = require("./routes/invoiceRouter");
+
+// DB
+connectDB();
+
+// MIDDLEWARE
+app.use(cors());
+app.use(clerkMiddleware());
+app.use(express.json({ limit: "20mb" }));
+app.use(express.urlencoded({ limit: "20mb", extended: true }));
+
+// ROUTES
+// uploaded files publicly accessible via URL
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+
+app.use("/api/invoice", invoiceRouter);
+
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
+// PORT LISTEn
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});
