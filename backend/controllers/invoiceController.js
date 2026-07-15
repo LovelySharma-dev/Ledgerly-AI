@@ -84,7 +84,7 @@ async function generateUniqueInvoiceNumber(attempts = 8) {
 }
 
 // To create
-export async function createInvoice(req, res) {
+async function createInvoice(req, res) {
   try {
     const { userId } = getAuth(req) || {};
     if (!userId) {
@@ -231,7 +231,7 @@ export async function createInvoice(req, res) {
 }
 
 // Listing all the invoices
-export async function getInvoice(req, res) {
+async function getInvoice(req, res) {
   try {
     const { userId } = getAuth(req) || {};
     if (!userId) {
@@ -271,7 +271,7 @@ export async function getInvoice(req, res) {
 }
 
 //GET INVOICE BY ID
-export async function getInvoiceById(req, res) {
+async function getInvoiceById(req, res) {
   try {
     const { userId } = getAuth(req) || {};
     if (!userId) {
@@ -313,7 +313,7 @@ export async function getInvoiceById(req, res) {
 }
 
 // Upadate an Invoice
-export async function updateInvoice(req, res) {
+async function updateInvoice(req, res) {
   try {
     const { userId } = getAuth(req) || {};
     if (!userId) {
@@ -445,7 +445,7 @@ export async function updateInvoice(req, res) {
 }
 
 // To delete an Invoice
-export async function deleteInvoice(req, res) {
+async function deleteInvoice(req, res) {
   try {
     const { userId } = getAuth(req) || {};
     if (!userId) {
@@ -479,3 +479,11 @@ export async function deleteInvoice(req, res) {
     });
   }
 }
+
+module.exports = {
+  createInvoice,
+  getInvoice,
+  getInvoiceById,
+  updateInvoice,
+  deleteInvoice,
+};

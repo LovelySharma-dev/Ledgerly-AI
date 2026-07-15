@@ -6,7 +6,7 @@ const {
   createInvoice,
   updateInvoice,
   deleteInvoice,
-} = require("../controllers/InvoiceController");
+} = require("../controllers/invoiceController");
 
 const invoiceRouter = express.Router();
 

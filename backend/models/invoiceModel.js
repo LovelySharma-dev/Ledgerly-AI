@@ -48,7 +48,7 @@ const invoiceSchema = new mongoose.Schema(
     },
     dueDate: {
       type: Date,
-      default: "",
+      default: null,
     },
     items: [ItemSchema],
     //Business info
