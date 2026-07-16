@@ -5,7 +5,8 @@ const cors = require("cors");
 const app = express();
 const { clerkMiddleware } = require("@clerk/express");
 const path = require("path");
-const invoiceRouter = require("./routes/invoiceRouter");
+const invoiceRouter = require("./routes/invoiceRouter.js");
+const businessProfileRouter = require("./routes/businessProfileRouter.js");
 
 // DB
 connectDB();
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ limit: "20mb", extended: true }));
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 app.use("/api/invoice", invoiceRouter);
+app.use("/api/businessProfile", businessProfileRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello");

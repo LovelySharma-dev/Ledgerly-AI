@@ -469,7 +469,7 @@ async function deleteInvoice(req, res) {
 
     return res
       .status(200)
-      .json({ success: true, message: "Invoice deleted Succes", data: found });
+      .json({ success: true, message: "Invoice deleted Success", data: found });
   } catch (error) {
     console.log("Delete Invoice Error:", error);
 
