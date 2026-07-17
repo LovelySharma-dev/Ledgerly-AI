@@ -7,6 +7,7 @@ const { clerkMiddleware } = require("@clerk/express");
 const path = require("path");
 const invoiceRouter = require("./routes/invoiceRouter.js");
 const businessProfileRouter = require("./routes/businessProfileRouter.js");
+const aiInvoiceRouter = require("./routes/aiInvoiceRouter.js");
 
 // DB
 connectDB();
@@ -23,6 +24,7 @@ app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 app.use("/api/invoice", invoiceRouter);
 app.use("/api/businessProfile", businessProfileRouter);
+app.use("/api/ai", aiInvoiceRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello");
