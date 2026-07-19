@@ -93,6 +93,8 @@ const invoiceSchema = new mongoose.Schema(
       },
     },
 
+    items: { type: [ItemSchema], default: [] },
+
     currency: {
       type: String,
       default: "INR",
