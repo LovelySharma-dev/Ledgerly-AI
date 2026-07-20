@@ -250,7 +250,7 @@ useEffect(() => {
                   Hi, {user?.firstName || "User"}
                 </div>
                 <Link
-                  to="/dashboard"
+                  to="/app/dashboard"
                   onClick={() => setOpen(false)}
                   className="block text-violet-600 font-medium"
                 >

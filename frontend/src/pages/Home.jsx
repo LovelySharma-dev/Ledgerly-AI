@@ -1,9 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
+import Hero from '../components/Hero'
+
 const Home = () => {
   return (
-    <Navbar/>
+    <div>
+        <Navbar/>
+    <main className=''>
+        <Hero/>
+    </main>
+    </div>
   )
 }
 

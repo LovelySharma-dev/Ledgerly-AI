@@ -309,11 +309,11 @@ export const createInvoiceCustomStyles = {
 export const appShellStyles = {
   // Layout
   root: "min-h-screen bg-slate-50/80",
-  layout: "lg:flex",
+  layout: "flex flex-row w-full min-h-screen overflow-hidden",
 
   // Desktop Sidebar
   sidebar:
-    "hidden lg:block bg-[#0F172A] border-r border-white/5 transition-all duration-500 ease-in-out relative",
+    "hidden lg:flex flex-col h-screen bg-[#0F172A] border-r border-white/5 transition-all duration-500 ease-in-out relative",
   sidebarCollapsed: "w-20",
   sidebarExpanded: "w-72",
   sidebarGradient:
@@ -714,8 +714,7 @@ export const featuresStyles = {
 };
 
 export const heroStyles = {
-  section:
-    "relative min-h-screen pb-16 flex items-center justify-center overflow-hidden bg-white",
+  section: "relative min-h-screen flex items-center  overflow-hidden bg-white",
   bgElement1:
     "absolute top-1/4 -left-10 w-72 h-72 rounded-full blur-3xl opacity-40 bg-violet-200 animate-float-slow",
   bgElement2:
@@ -724,9 +723,9 @@ export const heroStyles = {
     "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl opacity-10 bg-slate-200 animate-pulse-slow",
   gridPattern:
     "absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]",
-  container: "relative max-w-7xl mx-auto px-6 py-24 lg:py-32",
+  container: "relative max-w-7xl mx-auto px-6 py-16 lg:py-20",
   grid: "grid lg:grid-cols-2 gap-16 lg:gap-24 items-center",
-  content: "space-y-8 lg:space-y-10",
+  content: "space-y-8 lg:space-y-8",
   contentInner: "space-y-6",
   badge:
     "inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-violet-50 border border-violet-100",
@@ -744,7 +743,7 @@ export const heroStyles = {
     "group relative inline-flex items-center justify-center gap-3 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-violet-600 text-white font-semibold shadow-xl shadow-violet-500/25 hover:bg-violet-700 hover:shadow-2xl hover:shadow-violet-500/30 active:scale-[0.98] transition-all duration-300 overflow-hidden",
   primaryButtonOverlay:
     "absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-  primaryButtonText: "relative",
+  primaryButtonText: "relative text-lg lg:text-xl font-semibold",
   primaryButtonIcon:
     "w-5 h-5 relative group-hover:translate-x-1 transition-transform duration-300",
   secondaryButton:
