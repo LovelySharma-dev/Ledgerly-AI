@@ -714,7 +714,8 @@ export const featuresStyles = {
 };
 
 export const heroStyles = {
-  section: "relative min-h-screen flex items-center  overflow-hidden bg-white",
+  section:
+    "relative min-h-[calc(100vh-64px)] flex items-center overflow-hidden bg-white pt-16",
   bgElement1:
     "absolute top-1/4 -left-10 w-72 h-72 rounded-full blur-3xl opacity-40 bg-violet-200 animate-float-slow",
   bgElement2:
@@ -723,20 +724,20 @@ export const heroStyles = {
     "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl opacity-10 bg-slate-200 animate-pulse-slow",
   gridPattern:
     "absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]",
-  container: "relative max-w-7xl mx-auto px-6 py-16 lg:py-20",
+  container: "relative max-w-7xl mx-auto px-6 py-8 lg:py-10",
   grid: "grid lg:grid-cols-2 gap-16 lg:gap-24 items-center",
-  content: "space-y-8 lg:space-y-8",
-  contentInner: "space-y-6",
+  content: "space-y-5 lg:space-y-8",
+  contentInner: "space-y-5",
   badge:
     "inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-violet-50 border border-violet-100",
   badgeDot: "w-2 h-2 rounded-full bg-emerald-500 animate-pulse",
   badgeText: "text-sm font-medium text-violet-700",
   heading:
-    "text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight",
+    "text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight",
   headingLine1: "text-slate-900",
   headingLine2: "text-violet-600",
   headingLine3: "text-slate-500",
-  description: "text-xl lg:text-2xl text-slate-500 leading-relaxed max-w-2xl",
+  description: "text-base lg:text-lg text-slate-500 leading-7 max-w-xl",
   descriptionHighlight: "font-semibold text-slate-700",
   ctaContainer: "flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6",
   primaryButton:
@@ -750,12 +751,12 @@ export const heroStyles = {
     "group inline-flex items-center justify-center gap-2 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-white border border-slate-200 text-slate-700 font-semibold shadow-sm hover:shadow-md hover:border-slate-300 active:scale-[0.98] transition-all duration-300",
   secondaryButtonIcon:
     "w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300",
-  featuresGrid: "grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8",
+  featuresGrid: "grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5",
   featureItem: "flex items-center gap-3 group",
   featureIcon:
     "w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-xl shadow-sm group-hover:scale-110 group-hover:border-violet-200 group-hover:bg-violet-50 transition-all duration-300",
   featureText: "",
-  featureLabel: "font-semibold text-slate-900",
+  featureLabel: "font-semibold text-slate-900 whitespace-nowrap",
   featureDesc: "text-sm text-slate-500",
   demoColumn: "relative w-full",
   demoFloating1:
@@ -779,7 +780,7 @@ export const heroStyles = {
   cardInvoiceNumber: "font-bold text-slate-900 text-base sm:text-lg",
   cardStatus:
     "text-xs sm:text-sm text-emerald-700 font-medium bg-emerald-50 px-2 py-1 rounded-full mt-1",
-  itemsContainer: "py-6 space-y-4",
+  itemsContainer: "py-4 space-y-3",
   itemRow:
     "flex justify-between items-center group/item hover:bg-slate-50/80 p-2 sm:p-3 rounded-lg transition-colors duration-200",
   itemDot:
@@ -804,7 +805,7 @@ export const heroStyles = {
   sendButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
   aiIndicator:
-    "absolute -bottom-6 left-1/2 -translate-x-1/2 xl:translate-y-8 lg:translate-y-8 md:translate-y-3 translate-y-13 bg-white/95 backdrop-blur-xl rounded-2xl px-4 py-2 sm:px-4 sm:py-3 shadow-lg shadow-slate-900/10 border border-slate-200/70 text-sm sm:text-base ring-1 ring-slate-900/5",
+    "absolute left-1/2 -translate-x-1/2 -bottom-4 md:-bottom-5 bg-white/95 backdrop-blur-xl rounded-xl px-3 py-2 shadow-lg border border-slate-200 ring-1 ring-slate-900/5 z-20",
   aiIndicatorContent:
     "flex items-center gap-2 text-sm sm:text-base text-slate-600",
   aiIndicatorDot: "w-2 h-2 rounded-full bg-emerald-500 animate-pulse",
