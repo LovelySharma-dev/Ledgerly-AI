@@ -29,4 +29,4 @@ const businessProfileSchema = new mongoose.Schema(
   },
 );
 
-modules.exports = mongoose.model("BusinessProfile", businessProfileSchema);
+module.exports = mongoose.model("BusinessProfile", businessProfileSchema);
