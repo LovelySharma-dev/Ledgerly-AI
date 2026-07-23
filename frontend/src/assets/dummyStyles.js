@@ -1097,7 +1097,7 @@ export const kpiCardStyles = {
   mainContent: "flex-1 min-w-0",
   iconTrendContainer: "flex items-center gap-3 mb-3",
   iconContainer:
-    "p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300",
+    "p-3 rounded-xl bg-gradient-to-br shadow-lg group-hover:scale-110 transition-transform duration-300",
   icon: "w-5 h-5 text-white",
   trendBadge:
     "inline-flex items-center gap-1 px-2 py-1 rounded-full border text-xs font-medium",
