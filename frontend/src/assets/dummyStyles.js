@@ -316,7 +316,7 @@ export const appShellStyles = {
 
   // Desktop Sidebar
   sidebar:
-    "hidden lg:flex flex-col h-screen bg-gradient-to-b from-[#0F172A] to-[#161B33] border-r border-white/5 transition-all duration-500 ease-in-out relative",
+    "hidden lg:flex flex-col min-h-screen bg-gradient-to-b from-[#0F172A] to-[#161B33] border-r border-white/5 transition-all duration-500 ease-in-out relative",
   sidebarCollapsed: "w-20",
   sidebarExpanded: "w-72",
   sidebarGradient:
